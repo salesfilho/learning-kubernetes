@@ -3,17 +3,24 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   labels:
-    app: nginx
+    app: web-app
 spec:
-  replicas: 2
+  replicas: 9
   selector:
     matchLabels:
-      app: nginx
+      app: web-app
   template:
     metadata:
       labels:
-        app: nginx
+        app: web-app
     spec:
       containers:
-      - name: nginx-container
-        image: nginx:latest
+        - name: nginx-web-app
+          image: nginx:latest
+      topologySpreadConstraints:
+        - maxSkew: 2
+          topologyKey: topology.kubernetes.io/hostname
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: web-app
