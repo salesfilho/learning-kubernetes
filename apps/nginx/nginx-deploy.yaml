@@ -15,7 +15,7 @@ spec:
         app: web-app
     spec:
       containers:
-        - name: web-app-container
+        - name: web-app
           image: nginx:latest
       topologySpreadConstraints:
         - maxSkew: 2
