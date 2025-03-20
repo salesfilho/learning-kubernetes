@@ -14,9 +14,6 @@ spec:
       labels:
         app: web-app
     spec:
-      containers:
-        - name: nginx-web-app
-          image: nginx:latest
       topologySpreadConstraints:
         - maxSkew: 2
           topologyKey: topology.kubernetes.io/hostname
