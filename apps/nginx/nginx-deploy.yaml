@@ -19,7 +19,7 @@ spec:
           image: nginx:latest
       topologySpreadConstraints:
         - maxSkew: 2
-          topologyKey: topology.kubernetes.io/hostname
+          topologyKey: kubernetes.io/hostname
           whenUnsatisfiable: DoNotSchedule
           labelSelector:
             matchLabels:
