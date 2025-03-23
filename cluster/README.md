@@ -172,8 +172,7 @@ The above command will return output similar to:
 This MicroK8s deployment is acting as a node in a cluster. Please use the microk8s kubectl on the master.
 ```
 
-This is all!
-
+That's all!
 
 
 
