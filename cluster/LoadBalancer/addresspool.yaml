@@ -3,8 +3,8 @@
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: custom-addresspool
+  name: default-addresspool
   namespace: metallb-system
 spec: 
   addresses:
-  - 192.168.0.240-192.168.0.250
+  - 10.100.100.100-10.100.100.200
