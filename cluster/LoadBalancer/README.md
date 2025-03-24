@@ -136,6 +136,13 @@ spec:
       targetPort: 443
 ```
 
+To apply configuratio, run:
+
+```
+microk8s kubectl apply -f ingress-service.yaml
+```
+
+
 Now there is a load-balancer which listens on an arbitrary IP and directs traffic towards one of the listening ingress controllers.
 Let's check it:
 
