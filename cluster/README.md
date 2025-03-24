@@ -4,16 +4,50 @@ In this lab, we are using two master nodes in HA configuration and one compute n
 using three VMs running the latest version of Ubuntu Server.
 
 ### 1. Lab setup.
-The network topology consists of a 192.168.0.0/24 local network with internet access for all hosts, **master01** (192.168.0.254/24), **master02** (192.168.0.252/24), 
-and **dcn01** (192.168.0.253/24), as seen below:
+The network topology consists of a 192.168.0.0/24 local network with internet access for all hosts, **master01** (192.168.0.254/24), **master02** (192.168.0.253/24), 
+and **dcn01** (192.168.0.252/24), as seen below:
 
 ```mermaid
 graph TD;
     Internt-->Local_Network;
     Local_Network-->master01:192.168.0.254/24;
-    Local_Network-->master02:192.168.0.252/24;
-    Local_Network-->dcn01:192.168.0.253/24;
+    Local_Network-->master02:192.168.0.253/24;
+    Local_Network-->dcn01:192.168.0.252/24;
 ```
+
+#### 1.1. Network configuration
+
+Configure the IP addresses of the cluster nodes and the /etc/hosts file as below:
+
+```
+# Add these lines to /etc/hosts
+
+192.168.0.254 master01 master01-endpoint
+192.168.0.253 master02 master02-endpoint
+192.168.0.252 dcn01 dcn01-endpoint
+
+```
+
+No arquivo de configuração do netplan (por exemplo: /etc/netplan/50-cloud-init.yaml), coloque algo assim:
+
+```
+network:
+  version: 2
+  ethernets:
+    enp0s8: # Change the Node Interface
+      addresses:
+        - 192.168.0.252/24 # Change the Node IP Address
+      routes:
+        - to: default
+          via: 192.168.0.1
+      nameservers:
+        addresses:
+           - 127.0.0.53
+           - 181.213.132.2
+           - 8.8.8.8
+           - 8.8.4.4
+```
+
 
 ### 2. Install microk8s on each VM using snap
 
