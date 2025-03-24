@@ -56,7 +56,7 @@ MicroK8s will install a minimal, lightweight Kubernetes you can run and use on p
 It can be installed with a snap:
 
 ```
-sudo snap install microk8s
+sudo snap install microk8s --classic
 ```
 
 #### 2.2 Join the group
