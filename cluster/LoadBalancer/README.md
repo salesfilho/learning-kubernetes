@@ -81,7 +81,8 @@ kind: Service
 metadata:
   name: alb-service
   annotations:
-    metallb.universe.tf/address-pool: custom-addresspool
+    metallb.universe.tf/address-pool: default-addresspool
+    # A custom-addresspool is possible
 spec:
   selector:
     name: nginx
