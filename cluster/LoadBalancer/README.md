@@ -41,7 +41,7 @@ microk8s enable metallb
 Alternatively, you can provide the IP address pool in the enable command. In this lab case, we'll take 192.168.0.40-192.168.0.50:
 
 ```
-microk8s enable metallb:192.168.0.40-192.168.0.50
+microk8s enable metallb:10.100.100.100-10.100.100.200
 ```
 
 ## 2.2 Configure IPAddressPool resources
@@ -56,11 +56,11 @@ For our example lab, create the following custom address pool:
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: custom-addresspool
+  name: default-addresspool
   namespace: metallb-system
 spec: 
   addresses:
-  - 192.168.0.40-192.168.0.50
+  - 10.100.100.100-10.100.100.200
 ```
 
 And apply it with:
