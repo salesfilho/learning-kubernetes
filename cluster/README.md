@@ -69,13 +69,6 @@ mkdir -p ~/.kube
 chmod 0700 ~/.kube
 ```
 
-You will also need to re-enter the session for the group update to take place:
-
-```
-su - $USER
-microk8s config > ~/.kube/config
-```
-
 You will also need to set up local Kubernetes. To do this, do the following:
 
 ```
