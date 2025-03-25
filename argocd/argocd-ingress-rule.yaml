@@ -1,21 +1,22 @@
-# argocd-ingress-rule.yaml
-
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: argocd-ingress
+  name: argocd-server-ingress
   namespace: argocd
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/backend-protocol: "https"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 spec:
-  ingressClassName: public
+  ingressClassName: nginx
   rules:
-    - http:
-        paths:
-        - path: /argocd
-          pathType: Exact
-          backend:
-            service:
-              name: argocd-server
-              port:
-                number: 80
+  - host: argocd.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: argocd-server
+            port:
+              name: https
