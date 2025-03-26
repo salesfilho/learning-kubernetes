@@ -117,13 +117,12 @@ Now there is a load-balancer which listens on an arbitrary IP and directs traffi
 Let's check it:
 
 ```
-microk8s kubectl get svc
+microk8s kubectl get svc -n ingress -o wide
 ```
 
 ...the result is something like this:
 
 ```
-NAME          TYPE           CLUSTER-IP       EXTERNAL-IP     PORT(S)        AGE
-alb-service   LoadBalancer   10.152.183.233   192.168.0.240   80:32599/TCP   10m
-kubernetes    ClusterIP      10.152.183.1     <none>          443/TCP        6d5h
+NAME      TYPE           CLUSTER-IP       EXTERNAL-IP     PORT(S)                      AGE   SELECTOR
+ingress   LoadBalancer   10.152.183.209   192.168.0.240   80:32068/TCP,443:30386/TCP   47h   name=nginx-ingress-microk8s
 ```
