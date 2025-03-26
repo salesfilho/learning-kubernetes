@@ -1,10 +1,11 @@
-# ingress-service.yaml
-
 apiVersion: v1
 kind: Service
 metadata:
   name: ingress
   namespace: ingress
+  annotations:
+    metallb.universe.tf/address-pool: default-addresspool
+    cert-manager.io/cluster-issuer: local-ca-cluster-issuer
 spec:
   selector:
     name: nginx-ingress-microk8s
