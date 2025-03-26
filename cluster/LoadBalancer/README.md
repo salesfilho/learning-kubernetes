@@ -41,7 +41,7 @@ microk8s enable metallb
 Alternatively, you can provide the IP address pool in the enable command. In this lab case, we'll take 192.168.0.40-192.168.0.50:
 
 ```
-microk8s enable metallb:10.100.100.100-10.100.100.200
+microk8s enable metallb:192.168.0.240-192.168.0.250
 ```
 
 ## 2.2 Configure IPAddressPool resources
@@ -60,7 +60,7 @@ metadata:
   namespace: metallb-system
 spec: 
   addresses:
-  - 10.100.100.100-10.100.100.200
+  - 192.168.0.240-192.168.0.250
 ```
 
 And apply it with:
@@ -69,39 +69,7 @@ And apply it with:
 microk8s kubectl apply -f addresspool.yaml
 ```
 
-## 2.3 Configure Application LoadBalance Service (alb)
-
-Now, we can then configure which address pool MetalLB will use for each LoadBalancer service by setting the metallb.universe.tf/address-pool annotation:
-
-```
-# alb-service.yaml
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: alb-service
-  annotations:
-    metallb.universe.tf/address-pool: default-addresspool
-    # A custom-addresspool is possible
-spec:
-  selector:
-    name: nginx
-  type: LoadBalancer
-  # loadBalancerIP is optional. MetalLB will automatically allocate an IP 
-  # from its pool if not specified. You can also specify one manually.
-  # loadBalancerIP: x.y.z.a
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-```
-
-To apply this, run:
-```
-microk8s kubectl apply -f alb-service.yaml
-```
-
-## 2.4 Setting up a MetalLB/Ingress service
+## 2.3 Setting up a MetalLB/Ingress service
 
 For load balancing in a MicroK8s cluster, MetalLB can make use of Ingress. so, let's enable ingress:
 ```
@@ -112,12 +80,14 @@ Now, create a suitable ingress service, using the config file bellow:
 
 ```
 # ingress-service.yaml
-
 apiVersion: v1
 kind: Service
 metadata:
   name: ingress
   namespace: ingress
+  annotations:
+    metallb.universe.tf/address-pool: default-addresspool
+    cert-manager.io/cluster-issuer: local-ca-cluster-issuer
 spec:
   selector:
     name: nginx-ingress-microk8s
