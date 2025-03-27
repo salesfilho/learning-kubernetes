@@ -38,10 +38,12 @@ This is a Kubernetes learning project that aims to improve technical skills in m
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Learning Kubernetes by Example</h3>
 
-  <p align="center">
-    project_description
+<p align="left">
+
+This is a Kubernetes learning project that aims to improve technical skills in managing microservices clusters. At the end, a declarative infrastructure consisting of a Kubernetes cluster and three compute nodes will be deployed, two of which are HA control nodes and one exclusively for workload.
+</p>
     <br />
     <a href="https://github.com/salesfilho/learning-kubernetes"><strong>Explore the docs »</strong></a>
     <br />
@@ -51,7 +53,7 @@ This is a Kubernetes learning project that aims to improve technical skills in m
     <a href="https://github.com/salesfilho/learning-kubernetes/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
     <a href="https://github.com/salesfilho/learning-kubernetes/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
+  
 </div>
 
 
