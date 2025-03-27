@@ -35,7 +35,7 @@ This is a Kubernetes learning project that aims to improve technical skills in m
 <br />
 <div align="center">
   <a href="https://github.com/salesfilho/learning-kubernetes">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Learning Kubernetes by Example</h3>
