@@ -74,7 +74,7 @@ argocd-server                             LoadBalancer   10.152.183.198   192.16
 argocd-server-metrics                     ClusterIP      10.152.183.241   <none>          8083/TCP                     16h
 ```
 
-Pay attention to LoadBalancer EXTERNAL-IP. To access the ArgoCD UI you need set argocd.local in your DNS client or /etc/hosts 
+Pay attention to LoadBalancer EXTERNAL-IP. To access the ArgoCD UI you need set argocd.local in your DNS or /etc/hosts 
 
 ##### Check Ingress rules:
 
