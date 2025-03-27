@@ -22,9 +22,9 @@ Configure the IP addresses of the cluster nodes and the /etc/hosts file as below
 ```
 # Add these lines to /etc/hosts
 
-192.168.0.254 master01 master01-endpoint
-192.168.0.253 master02 master02-endpoint
-192.168.0.252 dcn01 dcn01-endpoint
+192.168.0.254 master01
+192.168.0.253 master02
+192.168.0.252 dcn01
 
 ```
 
