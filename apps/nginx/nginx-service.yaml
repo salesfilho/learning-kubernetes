@@ -8,6 +8,6 @@ spec:
   selector:
     app: web-app
   ports:
-    - port: 8001
+    - port: 80
       targetPort: 80
   type: LoadBalancer
