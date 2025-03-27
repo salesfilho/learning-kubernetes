@@ -197,10 +197,13 @@ Project Link: [https://github.com/salesfilho/learning-kubernetes](https://github
 [forks-url]: https://github.com/salesfilho/learning-kubernetes/network/members
 [stars-shield]: https://img.shields.io/github/stars/salesfilho/learning-kubernetes.svg?style=for-the-badge
 [stars-url]: https://github.com/salesfilho/learning-kubernetes/stargazers
+
 [issues-shield]: https://img.shields.io/github/issues/salesfilho/learning-kubernetes.svg?style=for-the-badge
 [issues-url]: https://github.com/salesfilho/learning-kubernetes/issues
+
 [license-shield]: https://img.shields.io/github/license/salesfilho/learning-kubernetes.svg?style=for-the-badge
 [license-url]: https://github.com/salesfilho/learning-kubernetes/blob/master/LICENSE.txt
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/salesfilho/
 
