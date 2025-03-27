@@ -1,5 +1,5 @@
-# learning-microk8s
-This is a Kubernetes learning project
+# Learning Kubernetes by Example
+This is a Kubernetes learning project that aims to improve technical skills in managing microservices clusters.
 
 
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
