@@ -43,6 +43,7 @@ This is a Kubernetes learning project that aims to improve technical skills in m
 <p align="left">
 
 This is a Kubernetes learning project that aims to improve technical skills in managing microservices clusters. At the end, a declarative infrastructure consisting of a Kubernetes cluster and three compute nodes will be deployed, two of which are HA control nodes and one exclusively for workload.
+
 </p>
     <br />
     <a href="https://github.com/salesfilho/learning-kubernetes"><strong>Explore the docs »</strong></a>
@@ -89,27 +90,27 @@ This is a Kubernetes learning project that aims to improve technical skills in m
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+```mermaid
+graph TD;
+    Internt-->Local_Network;
+    Local_Network-->master01:192.168.0.254/24;
+    Local_Network-->master02:192.168.0.253/24;
+    Local_Network-->dcn01:192.168.0.252/24;
+```
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `salesfilho`, `learning-kubernetes`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+This lab demonstrates how to create a three-node Kubernetes cluster in HA using [Microk8s](https://github.com/canonical/microk8s/blob/master/README.md). It also demonstrates how to configure the certificate management, loadbalancer, and ArgoCD services.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+[![ubuntu][Ubuntu]][ubuntu-url]
+[![virtualbox][VirtualBox]][virtualbox-url]
+[![kubernetes][Kubernetes]][kubernetes-url]
+[![argocd][ArgoCD]][argocd-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -212,7 +213,7 @@ Distributed under the project_license. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Sales Filho - [@twitter_handle](https://twitter.com/salesfilho) - sales.filho@ifrn.edu.br
 
 Project Link: [https://github.com/salesfilho/learning-kubernetes](https://github.com/salesfilho/learning-kubernetes)
 
@@ -223,9 +224,9 @@ Project Link: [https://github.com/salesfilho/learning-kubernetes](https://github
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [IFRN/CNAT](https://portal.ifrn.edu.br/campus/natalcentral/)
+* [UFRN/LAUT](http://laut.dca.ufrn.br/)
+* [NOVA SMAR](https://www.smar.com.br/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,9 +246,23 @@ Project Link: [https://github.com/salesfilho/learning-kubernetes](https://github
 [license-url]: https://github.com/salesfilho/learning-kubernetes/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/salesfilho/
-[product-screenshot]: images/screenshot.png
+
+[kubernetes]: https://img.shields.io/badge/kubernetes-326CE5?&style=plastic&logo=kubernetes&logoColor=white
+[kubernetes-url]: https://kubernetes.io/
+
+[argocd]: https://img.shields.io/badge/Argocd-EF7B4D?&style=plastic&logo=Argo&logoColor=white
+[argocd-url]: https://argo-cd.readthedocs.io/en/stable/
+
+[ubuntu]: https://img.shields.io/badge/Ubuntu-fff?logo=Ubuntu&logoColor=fff&color=E95420
+[ubuntu-url]: https://ubuntu.com/download
+
+[virtualbox]: https://img.shields.io/badge/VirtualBox-Experienced-yellowgreen
+[virtualbox-url]: https://www.virtualbox.org/
+
+
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
+
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
