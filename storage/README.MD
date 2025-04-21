@@ -34,6 +34,15 @@ Run this command:
 microk8s.kubectl apply -f nfs-pv.yml
 ```
 
+The result is something like:
+
+```
+$ microk8s.kubectl get pv
+NAME     CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE
+pv0001   10Gi       RWX            Retain           Available           fast-ssd       <unset>                          22s
+```
+
+
 ### 3. As a devops team member, create a PVC configuration to your applicartion [as seen here.](https://github.com/salesfilho/learning-kubernetes/blob/main/storage/nfs/README.MD).
 
 
