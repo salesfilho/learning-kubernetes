@@ -14,5 +14,5 @@ spec:
     - hard
     - nfsvers=4.1
   nfs:
-    path: /sorage
+    path: /sorage01
     server: master01
