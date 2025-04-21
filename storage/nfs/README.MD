@@ -23,3 +23,10 @@ You can configure the directories to be exported by adding them to the /etc/expo
 ```
 /storage  master01(rw,async,no_subtree_check,no_root_squash)  master02(rw,async,no_subtree_check,no_root_squash) dcn01(rw,async,no_subtree_check,no_root_squash)
 ```
+
+### Export FS
+
+Export directories:
+```
+exportfs -a
+```
