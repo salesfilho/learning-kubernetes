@@ -21,5 +21,5 @@ sudo systemctl start nfs-kernel-server.service
 You can configure the directories to be exported by adding them to the /etc/exports file. For example:
 
 ```
-/storage 192.168.0.252 (rw,async,no_subtree_check,no_root_squash) 192.168.0.253 (rw,async,no_subtree_check,no_root_squash) 192.168.0.252 (rw,async,no_subtree_check,no_root_squash) 
+/storage  master01(rw,async,no_subtree_check,no_root_squash)  master02(rw,async,no_subtree_check,no_root_squash) dcn01(rw,async,no_subtree_check,no_root_squash)
 ```
