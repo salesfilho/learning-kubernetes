@@ -1,6 +1,6 @@
 ## Persistent Volume
 
-This step-by-step tutorial teaches you how to create an NFS Persistent Volume in Kubernetes. Refer to the official documentation 
+This step-by-step tutorial teaches you how to create a NFS Persistent Volume in Kubernetes. Refer to the official documentation 
 at https://kubernetes.io/docs/concepts/storage/persistent-volumes/ for more details.
 
 ### 1. As a system administrator, create and export the NFS directory [as seen here.](https://github.com/salesfilho/learning-kubernetes/blob/main/storage/nfs/README.MD)
