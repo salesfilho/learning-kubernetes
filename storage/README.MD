@@ -43,7 +43,7 @@ pv0001   10Gi       RWX            Retain           Available           fast-ssd
 ```
 
 
-### 3. As a devops team member, create a PVC configuration to your applicartion as seen here.](https://github.com/salesfilho/learning-kubernetes/blob/main/apps/postgres/postgres-pvc.yaml).
+### 3. As a devops team member, create a PVC configuration to your applicartion as seen in https://github.com/salesfilho/learning-kubernetes/blob/main/apps/postgres/postgres-pvc.yaml
 
 
 
