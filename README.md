@@ -105,7 +105,8 @@ This example was implemented using a host computer (MacOS M2) with 16GB RAM and 
 )
 3. [Configure Cluster LoadBalancer](https://github.com/salesfilho/learning-kubernetes/tree/main/cluster/LoadBalancer)
 4. [Install and Configure ArgoCD](https://github.com/salesfilho/learning-kubernetes/tree/main/cluster/LoadBalancer)
-
+5. [How to create a NFS Persistent Volume in Kubernetes
+](https://github.com/salesfilho/learning-kubernetes/blob/main/storage/README.MD)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
