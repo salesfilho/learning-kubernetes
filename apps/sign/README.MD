@@ -11,5 +11,6 @@ microk8s.kubectl apply -f backend-deployment.yaml
 microk8s.kubectl apply -f backend-service.yaml
 microk8s.kubectl apply -f frontend-deployment.yaml
 microk8s.kubectl apply -f frontend-service.yaml
+microk8s.kubectl apply -f ingress.yaml
 ```
 
