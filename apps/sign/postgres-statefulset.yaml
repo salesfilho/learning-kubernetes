@@ -63,6 +63,7 @@ spec:
       name: postgres-data
     spec:
       accessModes: [ "ReadWriteOnce" ]
+      storageClassName: slow  # Nome da StorageClass criada via NFS pv0001
       resources:
         requests:
-          storage: 1Gi
+          storage: 2Gi
