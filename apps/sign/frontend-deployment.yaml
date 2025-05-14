@@ -17,6 +17,6 @@ spec:
         image: salesfilho/sign-app:latest
         env:
         - name: API_BASE_URL
-          value: http://backend:8000/api
+          value: http://api.sign.local/api
         ports:
         - containerPort: 80
